@@ -7,16 +7,29 @@ Este proyecto consta de dos microservicios principales: `cliente-service` y `pro
 ## Instalación y Ejecución 
 ### 1. Dependencias Antes de ejecutar los microservicios, es necesario instalar las dependencias. 
 Para ello, ejecuta los siguientes comandos en la raíz de cada microservicio (`cliente-service` y `producto-service`):
+<<<<<<< HEAD
  ```bash ./mvnw dependency:tree ./mvnw clean package ``` 
+=======
+ ```./mvnw dependency:tree ```
+ ```./mvnw clean package ``` 
+>>>>>>> 2970512eadc2804b7c4671d23e7d14dd188796ad
  Estos comandos realizan dos tareas principales: 
  - `dependency:tree`: Muestra el árbol de dependencias del proyecto. 
  - `clean package`: Limpia el proyecto y empaqueta el compilado en formato JAR. 
  ### 2. Construcción de Imágenes Docker Con las dependencias resueltas, el siguiente paso es construir las imágenes Docker para cada servicio. 
  Utiliza los siguientes comandos: 
+<<<<<<< HEAD
  ```bash docker build -t cliente-service . docker build -t producto-service . ``` 
  Esto construirá las imágenes Docker necesarias para `cliente-service` y `producto-service`, etiquetándolas respectivamente. 
  ### 3. Ejecución con Docker Compose Una vez construidas las imágenes, puedes ejecutar los servicios utilizando Docker Compose: 
  ```bash docker-compose up --build ``` 
+=======
+ ``` docker build -t cliente-service .``` 
+ ``` docker build -t producto-service . ``` 
+ Esto construirá las imágenes Docker necesarias para `cliente-service` y `producto-service`, etiquetándolas respectivamente. 
+ ### 3. Ejecución con Docker Compose Una vez construidas las imágenes, puedes ejecutar los servicios utilizando Docker Compose: 
+ ``` docker-compose up --build ``` 
+>>>>>>> 2970512eadc2804b7c4671d23e7d14dd188796ad
  Este comando levantará todos los servicios definidos en el archivo `docker-compose.yml`, incluyendo cualquier dependencia como bases de datos o servicios de terceros. 
  ## Acceso a los Servicios Una vez en ejecución, los servicios estarán accesibles a través de los siguientes enlaces: 
  - **Cliente Service**: [Swagger UI](http://localhost:8080/swagger-ui/index.html) 
