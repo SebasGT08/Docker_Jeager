@@ -43,6 +43,20 @@ services:
       JAEGER_AGENT_HOST: jaeger
       JAEGER_AGENT_PORT: 6831
 
+  producto-service:
+    build: ./producto-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+      - jaeger
+    environment:
+      JAEGER_SERVICE_NAME: producto-service
+      JAEGER_SAMPLER_TYPE: const
+      JAEGER_SAMPLER_PARAM: 1
+      JAEGER_AGENT_HOST: jaeger
+      JAEGER_AGENT_PORT: 6831
+
 
 volumes:
   mongodb_data:
