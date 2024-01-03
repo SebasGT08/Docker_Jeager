@@ -21,7 +21,7 @@ Para ello, ejecuta los siguientes comandos en la raíz de cada microservicio (`c
  ```bash docker-compose up --build ``` 
  Este comando levantará todos los servicios definidos en el archivo docker-compose.yml, incluyendo cualquier dependencia como bases de datos o servicios de terceros. 
  ## Acceso a los Servicios Una vez en ejecución, los servicios estarán accesibles a través de los siguientes enlaces: 
- - **Cliente Service**: [Swagger UI](http://localhost:8080/swagger-ui/index.html) 
+ - **Cliente Service**: [Swagger UI](http://localhost:8082/swagger-ui/index.html) 
  - **Producto Service**: [Swagger UI](http://localhost:8081/swagger-ui/index.html) 
  Estas interfaces de Swagger UI te permitirán interactuar con cada microservicio y probar sus diferentes endpoints. 
  ## Herramientas de Monitoreo 
