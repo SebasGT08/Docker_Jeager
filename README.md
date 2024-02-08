@@ -18,7 +18,7 @@ Para ello, ejecuta los siguientes comandos en la raíz de cada microservicio (`c
  ```docker build -t producto-service . ``` 
  Esto construirá las imágenes Docker necesarias para `cliente-service` y `producto-service`, etiquetándolas respectivamente. 
  ### 3. Ejecución con Docker Compose Una vez construidas las imágenes, puedes ejecutar los servicios utilizando Docker Compose: 
- ```bash docker-compose up --build ``` 
+ ```docker-compose up --build ``` 
  Este comando levantará todos los servicios definidos en el archivo docker-compose.yml, incluyendo cualquier dependencia como bases de datos o servicios de terceros. 
  ## Acceso a los Servicios Una vez en ejecución, los servicios estarán accesibles a través de los siguientes enlaces: 
  - **Cliente Service**: [Swagger UI](http://localhost:8082/swagger-ui/index.html) 
