@@ -26,9 +26,6 @@ services:
     volumes:
       - mongodb_data:/data/db
 
-  
-
-
   cliente-service:
     build: ./cliente-service
     ports:
